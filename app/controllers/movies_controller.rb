@@ -1,13 +1,13 @@
 class MoviesController < ApplicationController
   def search
-    @movie = SearchMovie.new
   end
 
   def create
-    p "============================="
-    p params
-  #  @movie.search(params["search"])
+    @searching = SearchMovie.new.search(params[:search])
+    p" NOOOOOOOOOOOOOOOOOOOOOOOOOOON"
+  end
 
+  def show
   end
 
 end

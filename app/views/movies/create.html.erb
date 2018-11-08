@@ -1,0 +1,10 @@
+<p>Hellooooooo</p>
+
+
+<% @searching.each do |data|%>
+	<h2>Titre : </h2><%= data['title'] %>
+	<h2>Date de sortie : </h2><%= data['release_date']  %>
+	<h2>Réalisateur : </h2><%= data['director']  %>
+	<h2>Affiche : </h2><%= image_tag(data['poster_path'])   %>
+<% end %>
+
