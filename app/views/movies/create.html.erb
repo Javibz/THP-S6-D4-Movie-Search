@@ -1,10 +1,21 @@
-<p>Hellooooooo</p>
 
 
-<% @searching.each do |data|%>
-	<h2>Titre : </h2><%= data['title'] %>
-	<h2>Date de sortie : </h2><%= data['release_date']  %>
-	<h2>Réalisateur : </h2><%= data['director']  %>
-	<h2>Affiche : </h2><%= image_tag(data['poster_path'])   %>
-<% end %>
+<div class="row">
+	<% @searching.each do |data|%>
+	 <div class="card col-lg-3" >
+       <div class="card-body">
+           <div style="diplay: flex">
+           	  <h5 class="card-title">
+			  Titre : <%= data['title'] %>
+		 	  </h5>
+           </div>
+		   <h6 class="card-subtitle mb-2 text-muted"> <strong>Date de sortie</strong> : <%= data['release_date']  %> </h6>
+		   <p class="card-text" > <strong>Réalisateur</strong>:><%= data['director'] %>  </p>
+			<div class="text-center">
+				<h2>Affiche : </h2><%= image_tag(data['poster_path']) %>
+			</div>
 
+ 		</div>
+ 	</div>
+ 	<% end %>
+</div>
